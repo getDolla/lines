@@ -1,4 +1,4 @@
 from display import *
 
-def draw_line( screen, x0, y0, x1, y1, color ):
+def draw_line( x0, y0, x1, y1, screen, color ):
     pass
