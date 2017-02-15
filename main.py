@@ -3,29 +3,51 @@ from draw import *
 
 screen = new_screen()
 
-color = [ 255, 255, 255 ]
+color = [ 0, 255, 0 ]
 
-#top of the head
-draw_line( XRES/2 - 30, YRES-60, XRES/2 + 30, YRES-60, screen, color )
+#top
+x = XRES/2 - 1
+y = YRES - 1
+i = y - 15
+j = 0
+while i > (YRES/2) - 1:
+    draw_line( 0, i, x + j, y, screen, color )
+    draw_line( x - j, y, XRES - 1, i, screen, color )
+    i -= 15
+    j += 6
 
-draw_line( XRES/2 - 50, YRES-80, XRES/2 - 30, YRES-60, screen, color )
+#left
+x = 0
+y = YRES/2 - 1
+i = x + 15
+j = 0
+while i < (XRES/2) - 1:
+    draw_line( x, y - j, i, YRES - 1, screen, color )
+    draw_line( x, y + j, i, 0, screen, color )
+    i += 15
+    j += 6
 
-draw_line( XRES/2 + 30, YRES-60, XRES/2 + 50, YRES-80, screen, color )
+#right
+x = XRES - 1
+y = YRES/2 - 1
+i = x - 15
+j = 0
+while i > (XRES/2) - 1:
+    draw_line( i, YRES - 1, x, y - j, screen, color )
+    draw_line( i, 0, x, y + j, screen, color )
+    i -= 15
+    j += 6
 
-#sides of the head
-draw_line( XRES/2 - 50, YRES-80, XRES/2 - 50, YRES-140, screen, color )
-
-draw_line( XRES/2 + 50, YRES-80, XRES/2 + 50, YRES-140, screen, color )
-
-#bottom of the head
-draw_line( XRES/2 - 50, YRES-140, XRES/2 - 30, YRES-160, screen, color )
-
-draw_line( XRES/2 - 30, YRES-160, XRES/2 + 30, YRES-160, screen, color )
-
-draw_line( XRES/2 + 30, YRES-160, XRES/2 + 50, YRES-140, screen, color )
-
-#main body
-
+#top
+x = XRES/2 - 1
+y = 0
+i = y + 15
+j = 0
+while i < (YRES/2) - 1:
+    draw_line( 0, i, x + j, y, screen, color )
+    draw_line( x - j, y, XRES - 1, i, screen, color )
+    i += 15
+    j += 6
 
 display(screen)
 save_extension(screen, 'img.png')
