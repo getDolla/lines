@@ -49,9 +49,11 @@ while i < (YRES/2) - 1:
     i += 15
     j += 6
 
-#draws x and y axis
+#draws x and y axis and slopes of 1 and -1
 draw_line( XRES/2, 0, XRES/2, YRES-1, screen, color )
 draw_line( 0, YRES/2, XRES - 1, YRES/2, screen, color )
+draw_line( 0, 0, XRES - 1, YRES - 1, screen, color )
+draw_line( 0, YRES - 1, XRES - 1, 0, screen, color )
     
 display(screen)
 save_extension(screen, 'img.png')
