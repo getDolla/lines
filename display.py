@@ -10,7 +10,6 @@ GREEN = 1
 BLUE = 2
 
 DEFAULT_COLOR = [0, 0, 0]
-
 def new_screen( width = XRES, height = YRES ):
     screen = []
     for y in range( height ):
