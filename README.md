@@ -1,2 +1,2 @@
 # lines
-Draws a line...
+Draws lines!
