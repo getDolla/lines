@@ -38,7 +38,7 @@ while i > (XRES/2) - 1:
     i -= 15
     j += 6
 
-#top
+#bottom
 x = XRES/2 - 1
 y = 0
 i = y + 15
